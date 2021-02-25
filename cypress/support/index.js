@@ -21,3 +21,16 @@ import './commands'
 Cypress.Cookies.defaults({
     preserve: /wordpress|wp/
 })
+Cypress.Commands.add('typeWpAdminLogin', (user) => {
+    cy.visit('http://localhost/lms.loc/wp-admin') // visiting the site
+    cy.get('#user_login').type('admin')
+    cy.get('#user_pass').type('1')
+    cy.get('.forgetmenot #rememberme').click()
+    cy.get('#wp-submit').contains('Log In').click()
+    cy.url().should('match', /wp-admin/)
+})
+Cypress.Commands.add('WpAdminLogOut', (user) => {
+    cy.url().should('match', /wp-admin/)
+    cy.hover('#wp-admin-bar-my-account > [aria-haspopup="true"]').trigger('mouseover')
+
+})
