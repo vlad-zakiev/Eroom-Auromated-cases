@@ -28,9 +28,11 @@ Cypress.Commands.add('typeWpAdminLogin', (user) => {
     cy.get('.forgetmenot #rememberme').click()
     cy.get('#wp-submit').contains('Log In').click()
     cy.url().should('match', /wp-admin/)
+    cy.get('#menu-dashboard > .wp-has-submenu > .wp-menu-name').should('contain', 'Dashboard')
 })
 Cypress.Commands.add('WpAdminLogOut', (user) => {
     cy.url().should('match', /wp-admin/)
     cy.get('#wp-admin-bar-my-account .ab-sub-wrapper').invoke('show').should('be.visible').find('#wp-admin-bar-logout').click()
+    cy.url().should('match', /wp-login/)
 
 })
