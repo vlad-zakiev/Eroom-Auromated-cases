@@ -31,6 +31,6 @@ Cypress.Commands.add('typeWpAdminLogin', (user) => {
 })
 Cypress.Commands.add('WpAdminLogOut', (user) => {
     cy.url().should('match', /wp-admin/)
-    cy.hover('#wp-admin-bar-my-account > [aria-haspopup="true"]').trigger('mouseover')
+    cy.get('#wp-admin-bar-my-account .ab-sub-wrapper').invoke('show').should('be.visible').find('#wp-admin-bar-logout').click()
 
 })
