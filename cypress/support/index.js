@@ -18,9 +18,14 @@ import './commands'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
+
+
+//saving cookies for multiply tests
 Cypress.Cookies.defaults({
     preserve: /wordpress|wp/
 })
+
+//wp admin login command
 Cypress.Commands.add('typeWpAdminLogin', (user) => {
     cy.visit('http://localhost/lms.loc/wp-admin') // visiting the site
     cy.get('#user_login').type('admin')
@@ -30,6 +35,8 @@ Cypress.Commands.add('typeWpAdminLogin', (user) => {
     cy.url().should('match', /wp-admin/)
     cy.get('#menu-dashboard > .wp-has-submenu > .wp-menu-name').should('contain', 'Dashboard')
 })
+
+//wp admin log out command
 Cypress.Commands.add('WpAdminLogOut', (user) => {
     cy.url().should('match', /wp-admin/)
     cy.get('#wp-admin-bar-my-account .ab-sub-wrapper').invoke('show').should('be.visible').find('#wp-admin-bar-logout').click()
