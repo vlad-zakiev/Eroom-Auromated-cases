@@ -10,12 +10,11 @@ import createMeeting from '../chunks/create-meeting';
 
 describe('Eroom Plugin test', () => {
     createMeeting()
-
-    //ZoomSettings()
-    //loginWpAdmin()
-    //installPlugin()
-    //ActivateFreePlugin()
-    //logoutWpAdmin()
+        //ZoomSettings()
+        //loginWpAdmin()
+        //installPlugin()
+        //ActivateFreePlugin()
+        //logoutWpAdmin()
 
 
 
