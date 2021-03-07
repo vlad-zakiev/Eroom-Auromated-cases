@@ -3,7 +3,7 @@ export default function ZoomSettings() {
     //     cy.visit('http://localhost/lms.loc/wp-admin')
     // })
 
-    it('Zoom setting', () => {
+    it('Meetings setting', () => {
         cy.get('#toplevel_page_stm_zoom').click()
         cy.get('#toplevel_page_stm_zoom > .wp-submenu > :nth-child(8) > a').click()
     })
