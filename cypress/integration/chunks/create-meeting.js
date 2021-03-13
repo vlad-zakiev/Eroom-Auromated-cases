@@ -21,7 +21,7 @@ export default function createMeeting() {
             //clicking on calendar
         cy.get('.mx-input').click()
             //select date! You should choose date that you need here 
-        cy.get('[title="10.03.2021"]' /*<< DATE*/ ).click()
+        cy.get('[title="08.03.2021"]' /*<< DATE*/ ).click()
             //typing duration - You should type the duration here
         cy.get('#tab_1-stm_duration').type('20' /*<< DURATION*/ )
             //waiting room 'On'
@@ -32,14 +32,10 @@ export default function createMeeting() {
         cy.get('#publish').click()
             //visiting meeting url
         cy.get('#sample-permalink > a').click()
-        cy.url().should('match', /stm-zoom/)
-        cy.get('.countdown_title').should('contain', 'Meeting starts in')
-        cy.get('.zoom_info > h2').should('contain', 'Test meeting (Waiting room on)')
-        cy.get('.join_in_menu').should('contain', 'Join in browser')
-        cy.get('.outline').should('contain', 'Join in zoom app')
+            //joining with browser to the meeting
+        cy.get('.outline').invoke('removeAttr', 'target').click()
 
-        //joining to the meeting "Join in browser"
-        cy.get('.join_in_menu').click()
+        //cy.get('.join_in_menu').invoke('removeAttr', 'target').click() //join with app
 
 
         //Creating meeting with joing before host 
