@@ -12,7 +12,7 @@ export default function installPlugin() {
         cy.get('#pluginzip')
             .attachFile('eroom-zoom-meetings-webinar-master.zip', { subjectType: 'drag-n-drop' })
     })
-    it('Installing plugin', function() {
+    it.only('Installing plugin', function() {
         cy.get('#install-plugin-submit').click()
         cy.url().should('match', /update/)
             //cy.get('.wrap > :nth-child(4)').should('contain', 'Plugin installed successfully.')

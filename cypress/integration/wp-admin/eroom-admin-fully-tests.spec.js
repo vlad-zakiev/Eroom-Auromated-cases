@@ -9,12 +9,15 @@ import ZoomSettings from '../chunks/zoom-settings';
 import createMeetingWithWaitingRoom from '../chunks/create-meeting-waiting-room-on';
 import createMeetingWithJoinBeforeHost from '../chunks/create-meeting-join-before-host-on';
 import createMeetingWithEnforceLogin from '../chunks/create-meeting-enforce-login';
+import createWebinarWithJoinBeforeHost from '../chunks/create-webinar-join-before-host';
+import installEroomPro from '../chunks/eroom-pro-installing';
 
 describe('Eroom Plugin test', () => {
-
-    //createMeetingWithWaitingRoom()
-    //createMeetingWithJoinBeforeHost()
-    createMeetingWithEnforceLogin()
+    installEroomPro()
+        //createWebinarWithJoinBeforeHost()
+        //createMeetingWithWaitingRoom()
+        //createMeetingWithJoinBeforeHost()
+        //createMeetingWithEnforceLogin()
         //loginWpAdmin()
         //installPlugin()
         //ActivateFreePlugin()
