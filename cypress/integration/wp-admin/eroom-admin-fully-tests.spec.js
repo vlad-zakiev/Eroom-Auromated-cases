@@ -13,11 +13,11 @@ import createWebinarWithJoinBeforeHost from '../chunks/create-webinar-join-befor
 import installEroomPro from '../chunks/eroom-pro-installing';
 
 describe('Eroom Plugin test', () => {
-    installEroomPro()
-        //createWebinarWithJoinBeforeHost()
-        //createMeetingWithWaitingRoom()
-        //createMeetingWithJoinBeforeHost()
-        //createMeetingWithEnforceLogin()
+    //installEroomPro()
+    //createWebinarWithJoinBeforeHost()
+    //createMeetingWithWaitingRoom()
+    //createMeetingWithJoinBeforeHost()
+    createMeetingWithEnforceLogin()
         //loginWpAdmin()
         //installPlugin()
         //ActivateFreePlugin()
