@@ -7,12 +7,13 @@ export default function installPlugin() {
         cy.get('.upload').click()
             //cy.get('#menu-appearance > .wp-has-submenu > .wp-menu-name').click()
     })
+
     it('Upload plugin ', function() {
         //installing
         cy.get('#pluginzip')
             .attachFile('eroom-zoom-meetings-webinar-master.zip', { subjectType: 'drag-n-drop' })
     })
-    it.only('Installing plugin', function() {
+    it('Installing plugin', function() {
         cy.get('#install-plugin-submit').click()
         cy.url().should('match', /update/)
             //cy.get('.wrap > :nth-child(4)').should('contain', 'Plugin installed successfully.')
@@ -20,6 +21,8 @@ export default function installPlugin() {
     it('Checking for succses installetion', function() {
         cy.get('.wrap > :nth-child(4)').should('contain', 'Plugin installed successfully.')
     })
+
+
 
 
 

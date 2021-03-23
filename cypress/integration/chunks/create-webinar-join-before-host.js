@@ -22,7 +22,7 @@ export default function createWebinarWithJoinBeforeHost() {
             //clicking on calendar
         cy.get('.mx-input').click()
             //select date! You should choose date that you need here 
-        cy.get('[title="20.03.2021"]' /*<< DATE*/ ).click()
+        cy.get('[title="24.03.2021"]' /*<< DATE*/ ).click()
             //selecting timezone
         cy.get('#tab_1-stm_timezone').select('Asia/Tashkent')
             //inputing time

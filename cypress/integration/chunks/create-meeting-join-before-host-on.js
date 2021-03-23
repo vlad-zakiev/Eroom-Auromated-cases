@@ -21,11 +21,11 @@ export default function createMeetingWithJoinBeforeHost() {
             //clicking on calendar
         cy.get('.mx-input').click()
             //select date! You should choose date that you need here 
-        cy.get('[title="14.03.2021"]' /*<< DATE*/ ).click()
+        cy.get('[title="24.03.2021"]' /*<< DATE*/ ).click()
             //selecting timezone
         cy.get('#tab_1-stm_timezone').select('Asia/Tashkent')
             //inputing time
-        cy.get('#tab_1-stm_time').type('01:30' /*<< TIME*/ )
+        cy.get('#tab_1-stm_time').type('00:00' /*<< TIME*/ )
             //typing duration - You should type the duration here
         cy.get('#tab_1-stm_duration').type('20' /*<< DURATION*/ )
             //typing password
@@ -34,6 +34,7 @@ export default function createMeetingWithJoinBeforeHost() {
         cy.get('#tab_1-stm_join_before_host').click()
             //publishing meeting
         cy.get('#publish').click()
+        cy.wait(10000)
     })
     it('Visiting created meeting', function() {
         //visiting meeting url
