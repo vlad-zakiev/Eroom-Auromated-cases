@@ -3,7 +3,7 @@ export default function createMeetingWithJoinBeforeHost() {
     it('Visitin admin', function() {
             cy.visit('http://localhost/lms.loc/wp-admin')
         })
-        // Geting in Eroom>>Meerings
+        // Getting in Eroom>>Meerings
     it('Get in meetings', function() {
             cy.get('#toplevel_page_stm_zoom > .wp-has-submenu > .wp-menu-name').click()
         })
