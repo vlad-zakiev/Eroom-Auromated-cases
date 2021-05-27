@@ -11,10 +11,12 @@ export default function demoImport() {
     })
     it('theme activation', () => {
         cy.get('#menu-appearance > .wp-has-submenu > .wp-menu-name').click()
-        cy.get('[aria-describedby="consulting-action consulting-name"] > .theme-screenshot > img').click()
-        cy.get('.inactive-theme > .activate').click()
+        cy.get('[aria-describedby="consulting-action consulting-name"] > .theme-id-container > .theme-actions > .activate').click()
+            //cy.get('.inactive-theme > .activate').click()
         cy.get('.stm-button').click()
-
-        //cy.WpAdminLogOut()
+        cy.get('#email').type('zakiev.vladislav@stylemix.net')
+        cy.get('#password').type('3839772-Zv5v')
+        cy.get('.solid-button').click()
+            //cy.WpAdminLogOut()
     })
 }
