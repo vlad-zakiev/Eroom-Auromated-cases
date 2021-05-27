@@ -12,28 +12,31 @@ import createMeetingWithEnforceLogin from '../chunks/create-meeting-enforce-logi
 
 import createWebinarWithJoinBeforeHost from '../chunks/create-webinar-join-before-host';
 import installEroomPro from '../chunks/eroom-pro-installing';
+import createWebinar from '../chunks/create-webinar';
+import demoImport from '../chunks/demoimport';
 
 describe('Eroom Plugin test', () => {
-            //installEroomPro()
-            //createWebinarWithJoinBeforeHost()
-            //createMeetingWithWaitingRoom()
-            //createMeetingWithJoinBeforeHost()
-            //createMeetingWithEnforceLogin()
-            //loginWpAdmin()
-            installPlugin()
-            ActivateFreePlugin()
+    demoImport()
+        //installEroomPro()
+        //createWebinarWithJoinBeforeHost()
+        //createMeetingWithWaitingRoom()
+        //createMeetingWithJoinBeforeHost()
+        //createMeetingWithEnforceLogin()
+        //loginWpAdmin()
+        //installPlugin()
+        //ActivateFreePlugin()
+})
 
-            import createWebinar from '../chunks/create-webinar';
 
-            describe('Eroom Plugin test', () => {
-                createWebinar()
-                    //createMeetingWithWaitingRoom()
-                    //createMeetingWithJoinBeforeHost()
-                    //createMeetingWithEnforceLogin()
-                    //loginWpAdmin()
-                    //installPlugin()
-                    //ActivateFreePlugin()
+// describe('Eroom Plugin test', () => {
+//     createWebinar()
+//createMeetingWithWaitingRoom()
+//createMeetingWithJoinBeforeHost()
+//createMeetingWithEnforceLogin()
+//loginWpAdmin()
+//installPlugin()
+//ActivateFreePlugin()
 
-                //ZoomSettings()
-                //logoutWpAdmin()
-            })
+//ZoomSettings()
+//logoutWpAdmin()
+//})
