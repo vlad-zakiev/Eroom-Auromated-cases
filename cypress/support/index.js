@@ -22,7 +22,7 @@ import './commands'
 
 //saving cookies for multiply tests
 Cypress.Cookies.defaults({
-    preserve: /wordpress|wp/
+    preserve: /wordpress|wp|support_session/
 })
 
 //wp admin login command
